@@ -1,0 +1,68 @@
+{% extends "layout_logedin.html" %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function () {        
+        $("#submitbtn").click(function () {
+            $("upload").hide();
+        });
+    });
+</script>
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<form action="/uploader" method="POST" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-md-4">
+            <p>Format of the data</p>
+            <img src="/static/images/highlightedlinechartdataformat.png" align="middle">
+            <br />
+            <p>Sample Result </p>
+            <img src="/static/images/highlightedlinechart.png" align="middle">
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control" placeholder="Line Chart" name="title" value="{{request.form.title }}">
+            </div>
+            <div class="form-group">
+                <label>X Axis Label:</label>
+                <input type="text" class="form-control" placeholder="X Axis Lable" name="xlabel" value="{{request.form.xlabel }}">
+            </div>
+            <div class="form-group">
+                <label>X Axis Label:</label>
+                <input type="text" class="form-control" placeholder="Y Axis Label" name="ylabel" value="{{request.form.ylabel }}">
+            </div>
+            <div class="form-group">
+                <label>xTicks:</label>
+                <input type="text" class="form-control" placeholder="0" name="xticks" value="{{request.form.xticks }}">
+            </div>
+            <div class="form-group">
+                <label>yTicks:</label>
+                <input type="text" class="form-control" placeholder="0" name="yticks" value="{{request.form.yticks }}">
+            </div>
+        </div>
+        <div class="col-md-4">            
+            <div class="form-group">
+                <label>Width(inches):</label>
+                <input type="text" class="form-control" placeholder="12" name="width" value="{{request.form.width }}">
+            </div>
+            <div class="form-group">
+                <label>Height(inches):</label>
+                <input type="text" class="form-control" placeholder="9" name="height" value="{{request.form.height }}">
+            </div>
+            <br />
+            <br />
+            <div class="form-group">
+                <input type="file" name="file" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" value="Login">Generate</button>
+                <!--<input id="submitbtn" type="submit" />-->
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

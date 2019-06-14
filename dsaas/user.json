@@ -1,0 +1,35 @@
+{
+   "user": [
+	
+      {
+         "id":"01",
+         "username": "admin",
+         "password": "admin",
+         "level": "1"
+      },
+	
+      {
+         "id":"02",
+         "username": "gibi",
+         "password": "gibi",
+         "level": "1",
+	 "expirydate": "31-12-2099"
+      },
+	
+      {
+         "id":"03",
+         "username": "joshy",
+         "password": "joshy",
+         "level": "1",
+	 "expirydate": "31-12-2099"
+      },
+	
+      {
+         "id":"04",
+         "username": "kaja",
+         "password": "kaja",
+         "level": "1",
+	 "expirydate": "31-12-2099"
+      }
+   ]
+}

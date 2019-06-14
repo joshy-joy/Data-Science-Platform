@@ -1,0 +1,46 @@
+{% extends "layout_logedin.html" %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function () {        
+        $("#submitbtn").click(function () {
+            $("upload").hide();
+        });
+    });
+</script>
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<div id="upload">
+    <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input id="submitbtn" type="submit" />
+    </form>
+</div>
+<div class="table">
+    {% block body %}
+    {{ data|safe }}
+    {% endblock %}
+</div>
+<p>https://www.analyticsindiamag.com/a-primer-to-monte-carlo-simulation-in-python/</p>
+<p>
+    Text Mining: Understand the concepts such as Sentiment Analysis, Term Document Matrix, Spars Words.
+
+    Marketing Analytics: Learn Campaign Analysis, STP Model, Conjoint Analysis, Pricing Strategy.
+
+    Retail Analytics: Understand Customer Analytics, Merchandising Analytics, E-Commerce Marketing.
+
+    Financial Analytics: Learn advance case studies such as default model, Income forecast model, Revenue share model.
+
+    HR Analytics: Learn Employee Attrition Model, Employee Bonus Model.
+
+    <!--https://medium.com/quaintitative/monte-carlo-simulation-of-value-at-risk-in-python-c4da3ffe0f18-->
+
+    <!--https://www.quantinsti.com/blog/calculating-value-at-risk-in-excel-python-->
+    <!--https://medium.com/henry-jia/how-to-score-your-credit-1c08dd73e2ed-->
+</p>
+
+<p>Use this area to provide additional information.</p>
+
+{% endblock %}

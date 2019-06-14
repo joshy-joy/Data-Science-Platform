@@ -1,0 +1,30 @@
+{% extends "layout_logedin.html" %}
+
+{% block content %}
+
+<script>
+    $(document).ready(function () {        
+        $("#submitbtn").click(function () {
+            $("upload").hide();
+        });
+    });
+</script>
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<div id="upload">
+    <form action="/uploader" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input id="submitbtn" type="submit" />
+    </form>
+</div>
+<div class="table">
+    {% block body %}
+    {{ data|safe }}
+    {% endblock %}
+</div>
+<p>https://stackoverflow.com/questions/48646388/upload-file-in-one-line</p>
+
+<p>Use this area to provide additional information.</p>
+
+{% endblock %}

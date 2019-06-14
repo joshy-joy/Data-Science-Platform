@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+<div class="header">
+    <h2>
+        Plotly Chart Demo
+    </h2>
+</div>
+<div>
+    <img src="{{ graph1 }}" alt="User Image G1">
+</div>
+<div>
+    <img src="{{ graph2 }}" alt="User Image G2">
+</div>
+<div>
+    <img src="{{ graph3 }}" alt="User Image G3">
+</div>
+<div id="chart" class="chart">
+    
+</div>
+<script type="text/javascript">
+
+        var graphs = {{graphJSON|safe}};
+
+        Plotly.plot('chart',graphs,{});
+
+</script>
+
+<p>Use this area to provide additional information.</p>
+
+{% endblock %}

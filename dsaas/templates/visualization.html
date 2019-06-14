@@ -1,0 +1,92 @@
+{% extends "layout_logedin.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>{{ title }}.</h1>
+    <p class="lead">{{ message }}</p>
+    <!--https://stackoverflow.com/questions/2006172/how-to-reset-a-remote-git-repository-to-remove-all-commits-->
+    <!--https://python-graph-gallery.com/39-hidden-data-under-boxplot/-->
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bubble Chart</h2>
+        <img src="/static/images/bubblechart.png" align="middle">
+        <p>
+            A Bubble Chart is a multi-variable graph that is a cross between a Scatterplot and a Proportional Area Chart.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('bubblechart') }}">Plot Bubble Chart &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Box Plot</h2>
+        <img src="/static/images/boxplot.png" align="middle">
+        <p>
+            A boxplot summarizes the distribution of a numeric variable for several groups. Box plot is a standardized way of
+            displaying the distribution of data based on the five number summary: minimum, first quartile, median, third quartile, and maximum
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('boxplot') }}">Plot Bubble Chart &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Connected scatterplot</h2>
+        <img src="/static/images/Connectedscatterplot.png" align="middle">
+        <p>
+            Connected scatterplots are just a mix between scatterplots and linecharts. .
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('Connectedscatterplot') }}">Plot Connected Scatter Chart &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Line Chart</h2>
+        <img src="/static/images/linechart.png" align="middle">
+        <p>
+            A line chart is a type of chart which displays the information as a series of data points called makers - connected streight line segment.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('linechart') }}">Plot Line Chart &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Highlighted Line Chart </h2>        
+        <img src="/static/images/highlightedlinechart.png" align="middle">
+        <p>
+            In this line chart is a multiple series are ploted and interested one is high lighted. You can use this to compare one with others.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('highlightedlinechart') }}">Plot Highlighted Line Chart &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Pie Chart</h2>
+        <img src="/static/images/piechart.png" align="middle">
+        <p>
+            A pie chart is a circular statistical graphic, which is divided into slices to illustrate numerical proportion.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('piechart') }}">Plot Pie Chart &raquo;</a></p>
+    </div>
+</div>
+
+<!--<div class="row">
+    <div class="col-md-4">
+        <h2>Line Chart</h2>
+        <img src="/static/images/linechart.png" align="middle">
+        <p>
+            A line chart is a type of chart which displays the information as a series of data points called makers - connected streight line segment.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('linechart') }}">Plot Line Chart &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Bubble Chart</h2>
+        <p>
+            A Bubble Chart is a multi-variable graph that is a cross between a Scatterplot and a Proportional Area Chart.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('bubblechart') }}">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Bubble Chart</h2>
+        <p>
+            A Bubble Chart is a multi-variable graph that is a cross between a Scatterplot and a Proportional Area Chart.
+        </p>
+        <p><a class="btn btn-default" href="{{ url_for('bubblechart') }}">Learn more &raquo;</a></p>
+    </div>
+</div>-->
+
+{% endblock %}
